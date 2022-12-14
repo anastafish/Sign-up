@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -12,21 +13,28 @@
 </head>
 <body>
     <div class="part">
-        <div id="part-div"></div>
+        <div id="part-div"><h2 id="copyright"><p>
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            AnasTafish
+          </p></h2></div>
         <img src="natural.jpg" alt="">        
     </div>
     <div class="main">
         <h1 id="header">Sign-up Now!</h1>        
-        <form action="http://httpbin.org/post" method="post">
+        <form id="myform" action="http://httpbin.org/post" method="post" onsubmit=" return validation()">
             <fieldset>
-                <label for="">First Name<input type="text" name="first-name" required></label>
-                <label for="">Last Name<input type="text" name="last-name" required></label>
-                <label for="">Email<input type="email" name="email" required></label>
-                <label for="">Phone Number<input type="tel" name="phone-number" required></label>
-                <label for="">Password<input type="password" name="password" required></label>
-                <label for="">Password Confirmation<input type="password" name="password-conf" required></label>
+                <label for="">First Name<input type="text" name="first-name" required maxlength="20"><span></span></label>
+                <label for="">Last Name<input type="text" name="last-name" required maxlength="20"><span></span></label>
+                <label for="">Email<input type="email" name="email" required><span></span></label>
+                <label for="">Phone Number<input type="number" name="phone-number" required><span></span></label>
+                <label for="">Password<input id="pass" type="password" name="password" required minlength="8" maxlength="20"><span></span></label>
+                <label for="">Password Confirmation<input id="passconf" type="password" name="password-conf" required minlength="8" maxlength="20"><span></span></label>
             </fieldset>
             <button type="submit">Create account</button>
+            <p>Already have an account? <a href="https://google.com">login</a></p>
             </form>
     </div>        
 </body>

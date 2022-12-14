@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body{
     margin: 0px;
     padding:0px;
     outline: none;
     border: none;
+    background-color: antiquewhite;
 }
 
 form{
@@ -20,7 +22,6 @@ form{
     bottom: -40px;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
 
 }
 .main{
@@ -39,17 +40,20 @@ form{
 
 #part-div{
     background-color: gray;
-    opacity: 0.5;
+    opacity: 0.7;
     position: absolute;
     width: 100%;
     height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .part{
     flex: 30%;
     position: absolute;
     left: 0px;
-    height: 99.3%;
+    height: 100%;
     width: 414px;
     display: flex;
     align-items: center;
@@ -65,6 +69,7 @@ img{
    font-family: 'Martian Mono', monospace;
    position: absolute;
    top: 45px; 
+   font-size: 45px;
 }
 
 input,label{
@@ -95,4 +100,64 @@ button{
     width: 200px;
     height: 50px;
     font-family: 'DM Serif Display', serif;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+    font-family: 'DM Serif Display', serif;
+
+}
+
+#copyright{
+    font-family: 'Lobster', cursive;
+
+}
+
+input{
+    border-radius: 5px;
+}
+
+
+input:invalid{
+    border:1px solid red;
+}
+
+input:valid{
+    border: 1px solid green;
+}
+
+
+
+input:valid + span::before{
+    content: "✓";
+    color: green;
+}
+
+
+input[type="number"] + span::before{
+    top:-40px ;
+    right: -120px;
+
+}
+
+input[name="password-conf"] + span::before{
+    top:-40px ;
+    right: -183px;
+
+}
+
+input + span {
+    position: relative;
+}
+
+input + span::before{
+    position: absolute;
+    right: -90px;
+    top: -40px;
+}
+
+button:hover{
+    color:black;
+    background-color:burlywood
 }
