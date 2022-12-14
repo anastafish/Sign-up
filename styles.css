@@ -7,18 +7,18 @@ body{
     padding:0px;
     outline: none;
     border: none;
-    background-color: antiquewhite;
+    background-color: #D4E6F1;
 }
 
 form{
     display: flex;
     align-self: center;
     position: relative;
-    width: 88.5%;
+    width: 93.2%;
     gap: 30px;
-    background-color:white ;
+    background-color:#A9CCE3;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 30px;
     bottom: -40px;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@ form{
     flex:70%;
     position: absolute;
     right: 0px;
-    background-color:antiquewhite;
+    background-color:#D4E6F1;
     height: 99.3%;
     width: 878px;;
     
@@ -81,8 +81,8 @@ label{
 }
 
 fieldset{
-    padding: 40px;
-    background-color:white;
+    padding: 20px;
+    background-color:inherit;
     border: none;
     width: 100%;
     display: flex;
@@ -93,10 +93,10 @@ fieldset{
 
 button{
     border-radius: 10px;
-    background-color:greenyellow;
+    background-color:rgb(27, 231, 231);
     font-weight:1000;
     font-size: 20px;
-    color:aliceblue;
+    color:black;
     width: 200px;
     height: 50px;
     font-family: 'DM Serif Display', serif;
@@ -116,6 +116,11 @@ a{
 
 input{
     border-radius: 5px;
+    color:green;
+}
+
+input:focus{
+    background-color:rgb(160, 210, 233);
 }
 
 
@@ -127,7 +132,9 @@ input:valid{
     border: 1px solid green;
 }
 
-
+span::before{
+    content: "*";
+}
 
 input:valid + span::before{
     content: "✓";
@@ -159,5 +166,15 @@ input + span::before{
 
 button:hover{
     color:black;
-    background-color:burlywood
+    background-color:rgb(255, 94, 0)
+}
+
+#offers{
+    font-family: 'Martian Mono', monospace;
+    font-size: 20px;
+    word-spacing: 1px;
+}
+
+label[class="radio"]{
+    font-family: 'Martian Mono', monospace;
 }
